@@ -83,6 +83,57 @@ public class PingPongPanel extends JPanel implements Runnable{
     // method to check collisions
     public void collision() {
 
+        //bounce ball off top & bottom window edges
+        if(ball.y <=0) {
+            ball.setYDirection(-ball.yVelocity);
+        }
+        if(ball.y >= GAME_HEIGHT-BALL_DIAMETER) {
+            ball.setYDirection(-ball.yVelocity);
+        }
+        //bounce ball off paddles
+        if(ball.intersects(paddleA)) {
+            ball.xVelocity = Math.abs(ball.xVelocity);
+            ball.xVelocity++; //optional for more difficulty
+            if(ball.yVelocity>0)
+                ball.yVelocity++; //optional for more difficulty
+            else
+                ball.yVelocity--;
+            ball.setXDirection(ball.xVelocity);
+            ball.setYDirection(ball.yVelocity);
+        }
+        if(ball.intersects(paddleB)) {
+            ball.xVelocity = Math.abs(ball.xVelocity);
+            ball.xVelocity++; //optional for more difficulty
+            if(ball.yVelocity>0)
+                ball.yVelocity++; //optional for more difficulty
+            else
+                ball.yVelocity--;
+            ball.setXDirection(-ball.xVelocity);
+            ball.setYDirection(ball.yVelocity);
+        }
+        //stops paddles at window edges
+        if(paddleA.y<=0)
+            paddleA.y=0;
+        if(paddleA.y >= (GAME_HEIGHT-PADDLE_HEIGHT))
+            paddleA.y = GAME_HEIGHT-PADDLE_HEIGHT;
+        if(paddleB.y<=0)
+            paddleB.y=0;
+        if(paddleB.y >= (GAME_HEIGHT-PADDLE_HEIGHT))
+            paddleB.y = GAME_HEIGHT-PADDLE_HEIGHT;
+        //give a player 1 point and creates new paddles & ball
+        if(ball.x <=0) {
+            score.playerB++;
+            newPaddles();
+            newBall();
+            System.out.println("Player 2: "+score.playerB);
+        }
+        if(ball.x >= GAME_WIDTH-BALL_DIAMETER) {
+            score.playerA++;
+            newPaddles();
+            newBall();
+            System.out.println("Player 1: "+score.playerA);
+        }
+
     }
 
     // method to run the game
