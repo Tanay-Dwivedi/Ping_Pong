@@ -43,10 +43,16 @@ public class PongBall extends Rectangle{
     // method to move the ball
     public void move() {
 
+        x += xVelocity;
+        y += yVelocity;
+
     }
 
     // method to draw the ball
     public void draw(Graphics g) {
+
+        g.setColor(Color.white);
+        g.fillOval(x, y, height, width);
 
     }
 
