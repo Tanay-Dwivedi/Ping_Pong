@@ -9,7 +9,7 @@ public class PingPongPanel extends JPanel implements Runnable{
 
     // declaring some values
     static final int GAME_WIDTH = 1000;
-    static final int GAME_HEIGHT = (int) (GAME_WIDTH * (5/9));
+    static final int GAME_HEIGHT = (int) (GAME_WIDTH * 0.5555);
     static final Dimension SCREEN_SIZE = new Dimension(GAME_WIDTH, GAME_HEIGHT);
     static  final int BALL_DIAMETER = 20;
     static final int PADDLE_WIDTH = 25;
@@ -25,6 +25,17 @@ public class PingPongPanel extends JPanel implements Runnable{
 
     // creating a constructor
     PingPongPanel() {
+
+        // adding the paddle properties
+        newPaddles();
+        newBall();
+        score = new PingPongScore(GAME_WIDTH,GAME_HEIGHT);
+        this.setFocusable(true);
+        this.addKeyListener(new AL());
+        this.setPreferredSize(SCREEN_SIZE);
+
+        gameThread = new Thread(this);
+        gameThread.start();
 
     }
 

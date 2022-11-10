@@ -9,7 +9,7 @@ public class PingPongScore extends Rectangle {
     int playerB;
 
     // creating a constructor
-    PingPongScore() {
+    PingPongScore(int GAME_WIDTH, int GAME_HEIGHT) {
 
     }
 
