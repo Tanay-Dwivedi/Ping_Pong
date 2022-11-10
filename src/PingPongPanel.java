@@ -52,6 +52,12 @@ public class PingPongPanel extends JPanel implements Runnable{
     // method to paint on the screen
     public void paint(Graphics g) {
 
+        // painting our game panel
+        image = createImage(getWidth(),getHeight());
+        graphics = image.getGraphics();
+        draw(graphics);
+        g.drawImage(image,0,0,this);
+
     }
 
     // method to draw on the screen
