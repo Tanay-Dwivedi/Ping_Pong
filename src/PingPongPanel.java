@@ -42,6 +42,9 @@ public class PingPongPanel extends JPanel implements Runnable{
     // method to create a new ball on the screen
     public void newBall() {
 
+        random = new Random();
+        ball = new PongBall((GAME_WIDTH/2)-(BALL_DIAMETER/2),random.nextInt(GAME_HEIGHT-BALL_DIAMETER),BALL_DIAMETER,BALL_DIAMETER);
+
     }
 
     // method to create a new paddles
