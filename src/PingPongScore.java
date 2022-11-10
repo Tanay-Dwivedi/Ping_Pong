@@ -11,6 +11,9 @@ public class PingPongScore extends Rectangle {
     // creating a constructor
     PingPongScore(int GAME_WIDTH, int GAME_HEIGHT) {
 
+        PingPongScore.GAME_WIDTH = GAME_WIDTH;
+        PingPongScore.GAME_HEIGHT = GAME_HEIGHT;
+
     }
 
     // method to show the score
