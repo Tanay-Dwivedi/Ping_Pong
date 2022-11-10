@@ -40,6 +40,12 @@ public class PingPongPaddles extends Rectangle {
     // method to draw the paddles
     public void draw(Graphics g) {
 
+        if(id==1)
+            g.setColor(Color.blue);
+        else
+            g.setColor(Color.red);
+        g.fillRect(x, y, width, height);
+
     }
 
 }
