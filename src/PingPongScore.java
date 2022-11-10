@@ -1,6 +1,6 @@
 import java.awt.*;
 
-public class PingPongScore {
+public class PingPongScore extends Rectangle {
 
     // creating a constructor
     PingPongScore() {

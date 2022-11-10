@@ -1,6 +1,6 @@
 import java.awt.*;
 
-public class PongBall {
+public class PongBall extends Rectangle{
 
     // creating a constructor
     PongBall() {

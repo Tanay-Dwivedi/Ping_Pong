@@ -1,7 +1,7 @@
 import java.awt.*;
 import java.awt.event.KeyEvent;
 
-public class PingPongPaddles {
+public class PingPongPaddles extends Rectangle {
 
     // creating a constructor
     PingPongPaddles() {
