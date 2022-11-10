@@ -68,10 +68,14 @@ public class PingPongPaddles extends Rectangle {
     // method to set the direction of Y axis
     public void setYDirection(int yDirection) {
 
+        yVelocity = yDirection;
+
     }
 
     // method to move the paddles
     public void move() {
+
+        y = y + yVelocity;
 
     }
 
