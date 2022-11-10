@@ -3,6 +3,11 @@ import java.awt.event.KeyEvent;
 
 public class PingPongPaddles extends Rectangle {
 
+    // declaring the variables
+    int id;
+    int yVelocity;
+    int speed = 10;
+
     // creating a constructor
     PingPongPaddles() {
 

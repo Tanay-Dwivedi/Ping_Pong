@@ -2,6 +2,10 @@ import java.awt.*;
 
 public class PongBall extends Rectangle{
 
+    // declaring the variables
+    int xVelocity;
+    int yVelocity;
+
     // creating a constructor
     PongBall() {
 
