@@ -9,7 +9,11 @@ public class PingPongPaddles extends Rectangle {
     int speed = 10;
 
     // creating a constructor
-    PingPongPaddles() {
+    PingPongPaddles(int x, int y, int PADDLE_WIDTH, int PADDLE_HEIGHT, int id) {
+
+        // adding super constructors to the constructor
+        super(x,y,PADDLE_WIDTH,PADDLE_HEIGHT);
+        this.id=id;
 
     }
 

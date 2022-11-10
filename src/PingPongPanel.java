@@ -47,6 +47,10 @@ public class PingPongPanel extends JPanel implements Runnable{
     // method to create a new paddles
     public void newPaddles() {
 
+        // creating instances for paddles A and B
+        paddleA = new PingPongPaddles(0,(GAME_HEIGHT/2)-(PADDLE_HEIGHT/2),PADDLE_WIDTH,PADDLE_HEIGHT,1);
+        paddleB = new PingPongPaddles(GAME_WIDTH-PADDLE_WIDTH,(GAME_HEIGHT/2)-(PADDLE_HEIGHT/2),PADDLE_WIDTH,PADDLE_HEIGHT,2);
+
     }
 
     // method to paint on the screen
