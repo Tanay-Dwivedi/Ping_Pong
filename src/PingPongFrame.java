@@ -12,7 +12,7 @@ public class PingPongFrame extends JFrame {
         // adding the frame properties
         pingPongPanel = new PingPongPanel();
         this.add(pingPongPanel);
-        this.setTitle("Pong Game");
+        this.setTitle("Ping Pong Game");
         this.setResizable(false);
         this.setBackground(Color.black);
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);

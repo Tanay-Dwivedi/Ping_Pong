@@ -132,13 +132,11 @@ public class PingPongPanel extends JPanel implements Runnable {
             score.playerB++;
             newPaddles();
             newBall();
-            System.out.println("Player 2: " + score.playerB);
         }
         if (ball.x >= GAME_WIDTH - BALL_DIAMETER) {
             score.playerA++;
             newPaddles();
             newBall();
-            System.out.println("Player 1: " + score.playerA);
         }
 
     }

@@ -20,7 +20,7 @@ public class PingPongScore extends Rectangle {
     public void draw(Graphics g) {
 
         g.setColor(Color.white);
-        g.setFont(new Font("Consolas", Font.PLAIN, 60));
+        g.setFont(new Font("Consoles", Font.PLAIN, 60));
 
         g.drawLine(GAME_WIDTH / 2, 0, GAME_WIDTH / 2, GAME_HEIGHT);
 
