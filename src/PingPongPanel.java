@@ -67,6 +67,12 @@ public class PingPongPanel extends JPanel implements Runnable{
     // method to draw on the screen
     public void draw(Graphics g) {
 
+        paddleA.draw(g);
+        paddleB.draw(g);
+        ball.draw(g);
+        score.draw(g);
+        Toolkit.getDefaultToolkit().sync();
+
     }
 
     // method to move objects
@@ -107,10 +113,16 @@ public class PingPongPanel extends JPanel implements Runnable{
         // method when the key is pressed
         public void keyPressed(KeyEvent e) {
 
+            paddleA.keyPressed(e);
+            paddleB.keyPressed(e);
+
         }
 
         // method when the key is released
         public void keyReleased(KeyEvent e) {
+
+            paddleA.keyReleased(e);
+            paddleB.keyReleased(e);
 
         }
 
