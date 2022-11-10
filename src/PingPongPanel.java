@@ -78,6 +78,10 @@ public class PingPongPanel extends JPanel implements Runnable{
     // method to move objects
     public void move() {
 
+        paddleA.move();
+        paddleB.move();
+        ball.move();
+
     }
 
     // method to check collisions
